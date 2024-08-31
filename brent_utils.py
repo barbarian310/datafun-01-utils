@@ -1,4 +1,4 @@
-''' ITERATION 1
+''' ITERATION 2
 
 Module: Foreshadow Intelligence - Reusable Module for My Data Analytics Projects
 
@@ -24,32 +24,23 @@ Here's what a first draft of my utils_case.py might look like:
 I'll test it in an online interpreter to ensure this version runs correctly before continuing.
 '''
 
-#####################################
-# Declare a global variable named byline.
-#####################################
+byline: str = 'Foreshadow Intelligence: Your outlook has never been so good' #Global variable for easy reference
 
-byline: str = 'Foreshadow Intelligence: Your outlook has never been so good'
-
-#####################################
-# Define a main() function for this module.
-#####################################
-
-# Create a function named main.
-# A function is a block of code that performs a specific task.
-# This function will simply print the byline to the console.
 # Add a type hint to indicate that this function doesn't return anything when called 
 # (that is, it has a Python type of None).
-# It doesn't need any additional information passed in, 
-# so there's nothing needed inside the parentheses.
-# Everything afer the colon (:) must be indented (usually 4 spaces)
+# No parameters are required
 
+#main() function definition
 def main() -> None:
     '''Print the byline to the console when this function is called.'''
     print(byline)
+    
+    
+#get_byline() definition
+def get_byline():
+    '''This function returns the byline variable, and does not automatically print it'''
+    return byline
 
-#####################################
-# Conditional Execution - Only call main() when executing this module as a script.
-#####################################
-
+#main() is only called if the module __name__ is set to '__main__', not when it is imported
 if __name__ == '__main__':
-    main()
+    print(get_byline())
