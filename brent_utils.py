@@ -1,30 +1,18 @@
-''' ITERATION 2
+''' ITERATION 3
 
 Module: Foreshadow Intelligence - Reusable Module for My Data Analytics Projects
 
-This module provides a simple, reusable foundation for my analytics projects. 
-When we work hard to write useful code, we want it to be reusable.
-A good byline could be used in every Python analytics project we do.
+Here we define more variables to integrate into our company byline
 
-Process:
-
-We don't write code from top to bottom; instead, we often write it from the outside in.
-Here's what a first draft of my utils_case.py might look like:
-
-1. I start with this docstring at the very beginning.
-   I use it to clarify the purpose of my Python file and organize my thoughts.
-   
-2. I'll declare a global variable for my byline string and just set it to some simple text.
-
-3. I'll declare a main() function for my module. When I run this script, I can use main() to test my byline.
-
-4. I'll add the boilerplate conditional execution code so I only run the main() function when 
-   this script is executed directly (but not when I import it into another file).
-
-I'll test it in an online interpreter to ensure this version runs correctly before continuing.
 '''
 
-byline: str = 'Foreshadow Intelligence: Your outlook has never been so good' #Global variable for easy reference
+is_student: bool = True
+age_in_years: int = 24
+names_of_IDEs_installed: list = ['CLion', 'IntelliJ', 'Pycharm', 'VSCode', 'Visual Studio']
+ideal_human_temperatures: list = [98.6, 37.0]
+byline: str = f"""Foreshadow Intelligence: Your outlook has never been so good.
+It is {is_student} that I am still a student at {age_in_years} years old. However, I have a plethora
+of tools at my disposal, including {names_of_IDEs_installed}. As a side note, normal human temperatures are {ideal_human_temperatures} in fahrenheit and celsius respectively."""
 
 # Add a type hint to indicate that this function doesn't return anything when called 
 # (that is, it has a Python type of None).
@@ -42,5 +30,6 @@ def get_byline():
     return byline
 
 #main() is only called if the module __name__ is set to '__main__', not when it is imported
+
 if __name__ == '__main__':
     print(get_byline())
